@@ -36,9 +36,9 @@ fun main() {
             3 -> calString = "곱하기"
             4 -> calString = "나누기"
         }
-        println("[${calString}]연산을 진행중입니다...")
+        println("[${calString}]연산을 진행중입니다...\n잠시만 기다려주세요 :)")
         Thread.sleep(2000)
-        println("[${calString}]연산이 완료되었습니다...")
+        println("[${calString}]연산이 완료되었습니다!!!")
 
         var calc = Calculator(add)
         when(calculation)
@@ -52,16 +52,14 @@ fun main() {
         println("$a 와 $b 를 [${calString}]연산한 결과는 ["+result+"] 입니다.")
 
         println("새로운 연산을 하시겠습니까? [Y] : 아무거나 [N] : 1")
-        var new = readLine()!!.toInt()
-        if(new == 1)
+        var new = readLine()!!.toString()
+        if(new == "1")
         {
+            print("계산기가 종료됩니다.")
             return
         }
     }
 }
-
-
-
 
 
 
